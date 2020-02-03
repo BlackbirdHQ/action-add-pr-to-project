@@ -18,7 +18,7 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - uses: BlackirdHQ/action-add-pr-to-project@master
+      - uses: BlackirdHQ/action-add-pr-to-project@release/v1
         with:
           # The Column ID of the project
           columnId: 123456
