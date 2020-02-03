@@ -8,7 +8,9 @@ type Await<T> = T extends {
 async function run() {
   const columnId = core.getInput('columnId');
   const token = core.getInput('token');
+  const projectToken = core.getInput('projectToken');
   const octokit = new github.GitHub(token);
+  const projectOctokit = new github.GitHub(projectToken);
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
 
@@ -30,7 +32,7 @@ async function run() {
   }
 
   try {
-    const res = await octokit.projects.createCard({
+    const res = await projectOctokit.projects.createCard({
       column_id: parseInt(columnId, 10),
       content_id: pullRequest!.id,
       content_type: 'PullRequest'
