@@ -37,7 +37,6 @@ async function run() {
       content_id: pullRequest!.id,
       content_type: 'PullRequest'
     });
-    core.info(JSON.stringify(res, undefined, 2));
     core.info(`Successfully added Pull request #${github.context.payload?.pull_request?.number!} (${pullRequest!.id}) to Project on column id '${columnId}'.`);
   } catch (err) {
     core.setFailed(
