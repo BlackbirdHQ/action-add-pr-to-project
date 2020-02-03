@@ -1,0 +1,9 @@
+name: Add Pull Request to Project
+description: Automatically add your Pull Requests to a specific project.
+inputs:
+  columnId:
+    description: 'The ID of the column that you want to add the PR to. You can get the ID by clicking the three dots on the column, choosing "Copy column link" and then using the number at the end of the URL.'
+    required: true
+runs:
+  using: node12
+  main: dist/index.js
