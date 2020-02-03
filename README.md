@@ -29,6 +29,6 @@ jobs:
 ```
 
 
-Note, if you want to add the PR to a project that's not in the repo itself, you will need to create an access token with the permissions for this. For example, in the screenshot below, I'm setting up a token to add the PR to an organization project, and storing it in secrets under `ORG_GITHUB_TOKEN`.
+**Note:** If you want to add the PR to a project that's not in the repo itself, you will need to create an access token with the permissions for this. For example, in the screenshot below, I'm setting up a token to add the PR to an organization project, and storing it in secrets under `ORG_GITHUB_TOKEN`.
 
 <img width="651" alt="Screenshot 2020-02-03 at 21 04 35" src="https://user-images.githubusercontent.com/1189998/73687067-8b708780-46c9-11ea-9f38-cf35c2350108.png">
