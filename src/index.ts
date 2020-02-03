@@ -15,12 +15,12 @@ async function run() {
   });
 
   try {
-    await octokit.projects.createCard({
+    const res = await octokit.projects.createCard({
       column_id: parseInt(columnId, 10),
       content_id: pullRequest.id,
       content_type: 'PullRequest'
     });
-    octokit.projects.getCard
+    core.info(JSON.stringify(res, undefined, 2));
   } catch (err) {
     core.setFailed(
       `Pull request #${github.context.payload?.pull_request?.number!} (${pullRequest.id}) could not be added to Project on column id '${columnId}'.`,
